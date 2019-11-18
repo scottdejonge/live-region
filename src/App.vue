@@ -1,28 +1,50 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Fields from './components/Fields.vue'
+import Output from './components/Output.vue'
+import LiveRegion from './components/LiveRegion.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Fields,
+    Output,
+    LiveRegion
   }
 }
 </script>
 
+<template>
+  <main>
+    <h1>Live Area</h1>
+    <h2>Input</h2>
+    <Fields />
+    <h2>Output</h2>
+    <Output />
+    <h2>Example</h2>
+    <LiveRegion />
+  </main>
+</template>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: auto;
+  padding: 1rem;
+  max-width: 42rem;
 }
 </style>
